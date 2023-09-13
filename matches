@@ -1,0 +1,65 @@
+import java.util.*;
+class ss
+{
+    int matchesscore;
+    int numberofmatches;
+    int totalscore;
+    void getdata()
+    {
+
+        for (int i=1;i<10;i++)
+        {
+
+            if (!(matchesscore<0))
+            {
+                totalscore = matchesscore+totalscore;
+                numberofmatches = i;
+                Scanner s = new Scanner(System.in);
+                System.out.println("Enter the score of " + i + " match" );
+                matchesscore = s.nextInt();
+            }
+            else
+            {
+                System.out.println("application is terminate");
+                break;
+
+            }
+        }
+
+    }
+    int calculateaverage()
+    {
+        int avg = (totalscore/numberofmatches);
+        return avg;
+    }
+    void displaydata()
+    {
+        System.out.println("Number of matches "+numberofmatches);
+        System.out.println("Total number of score "+totalscore);
+        System.out.println("calculate the average"+calculateaverage());
+
+    }
+}
+class Matches{
+    public static void main(String args[])
+    {
+        ss obj = new ss();
+        obj.getdata();
+        obj.displaydata();
+    }
+}
+output
+Enter the score of 1 match
+24
+Enter the score of 2 match
+32
+Enter the score of 3 match
+10
+Enter the score of 4 match
+20
+Enter the score of 5 match
+-2
+application is terminate
+Number of matches 5
+Total number of score 86
+calculate the average17
